@@ -1,6 +1,6 @@
 +++
 date = "2016-01-24T15:24:26-05:00"
-draft = true
+draft = false
 title = "about"
 Categories = ["about"]
 +++

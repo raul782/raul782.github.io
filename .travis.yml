@@ -1,3 +1,26 @@
+language: go
+
+go:
+    - "1.5.1"
+
+env:
+    global:
+        - SSH_KEY="id_rsa"
+        - GIT_NAME="raul782"
+        - GIT_EMAIL="raulrodriguez782@gmail.com"
+        - SOURCE_DIR="public"
+        - DEPLOY_BRANCH="source"
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_b47ced9b2676_key -iv $encrypted_b47ced9b2676_iv
-  -in travis_rsa.enc -out ~\/.ssh/travis_rsa -d
+    - openssl aes-256-cbc -K $encrypted_b47ced9b2676_key -iv $encrypted_b47ced9b2676_iv -in travis_rsa.enc -out ~\/.ssh/travis_rsa -d
+
+before_script:
+    - go get -u -v github.com/spf13/hugo
+
+script:
+    - git clone https://github.com/raul782/hugo-blog-theme ./themes/hugo-blog-theme
+    - hugo
+
+after_success:
+#    - echo "rcoedo.com" > ./public/CNAME
+    - ./scripts/deploy.sh

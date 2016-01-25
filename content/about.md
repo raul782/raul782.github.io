@@ -15,4 +15,4 @@ Lately, he's been deeply interested in deep learning and devops, and has been ti
 
 Contact
 
-You can contact me via [email](mailto:raulrodriguez782@gmail.com), find me on [twitter](https://www.twitter.com/raul782) or [github](https://github.com/raul782)
+You can contact me via [email](mailto:raulrodriguez782@gmail.com), find me on [twitter](https://www.twitter.com/raul782) or [github](https://github.com/raul782).
